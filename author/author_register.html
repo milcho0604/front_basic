@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="background-color: chocolate;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <object data="header.html" type="text/html" style="width: 100%;"></object>
+    <div class="container">
+        <div class="page-header"><h3>회원가입</h3></div>
+        <form action="" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="이름을 입력해주세요.">
+            </div>
+            <div>
+                <label for="email">이메일</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="이메일을 입력해주세요">
+            </div>
+            <div>
+                <label for="password">비밀번호</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="비밀번호를 입력해주세요">
+            </div>
+            <div>
+                <label for="authentication">사용자 권한</label>
+                <br>
+                <select name="authentication" id="authentication" class="form-select">
+                    <option value="admin">관리자</option>
+                    <option value="user" selected   ㅐㅇ니ㅏ라ㅣㅓㄹㄴ이ㅓㅏㄹㅇ니ㅓㅏㄴㄹ어ㅏㅣㄹㄴ와ㅣㄹㅇ노ㅓㅏㄹㄴ오너아ㅗㄴㅁ아ㅓ론암론어ㅏㄹㅇㄴ./ ㅊ  ㅇㅁ니ㅔㅔ;'ㅁㄴ'>유저
+                    </option>
+                    <option value="guest">게스트</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <button type="submit" class="btn btn-secondary">회원가입</button>
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>
