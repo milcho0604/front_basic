@@ -8,12 +8,12 @@
 
 </head>
 <body>
-   <object style="width:100%;" data="../common/header.html" type="text/html"></object>
+   <object style="width:100%;" data="/post/header.html" type="text/html"></object>
    <div class="container">
         <div class="page-header">
             <h3>회원가입</h3>
         </div>
-        <form action="http://localhost:8081/author/register2" method="post" enctype="application/x-www-form-urlencoded">
+        <form id="authorForm">
             <div class = "form-group">
                 <label for="name">이름</label>
                 <input type="text" class="form-control" name="name" id="name">
@@ -36,6 +36,28 @@
             <button type="submit" class = "btn btn-secondary flo">제출</button>
         </form> 
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById("authorForm").addEventListener('submit',
+            async function(event){
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                const role = document.getElementById("role").value;
 
+                try {
+                    const response = await axios.post('http://localhost:8081/author/register1',
+                        {name:name, email:email, password:password, role:role}
+                    )
+                    console.log(response.data);
+                } catch(e){
+                    console.log(e);
+                }
+
+            }
+        )
+
+    </script>
 </body>
 </html>
